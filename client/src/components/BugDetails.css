@@ -1,0 +1,283 @@
+.bug-details {
+  max-width: 900px;
+}
+
+.bug-details-content {
+  padding: 1.5rem;
+}
+
+.bug-details-header {
+  margin-bottom: 2rem;
+}
+
+.bug-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-open {
+  background: #fee;
+  color: #dc3545;
+}
+
+.status-badge.status-progress {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.status-badge.status-resolved {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.status-not-reproducible {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.status-closed {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.priority-badge.priority-high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.priority-badge.priority-medium {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.priority-badge.priority-low {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.bug-details-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bug-details-section:last-of-type {
+  border-bottom: none;
+}
+
+.bug-details-section h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.bug-details-section p {
+  color: #666;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.bug-steps {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  font-family: inherit;
+  white-space: pre-wrap;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.bug-details-meta {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.meta-item {
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+.meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.meta-item strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.verification-info {
+  background: #f8f9fa;
+  border-left: 4px solid #1976d2;
+}
+
+.verification-status {
+  margin-top: 0.5rem;
+}
+
+.verification-completed {
+  color: #388e3c;
+  font-weight: 600;
+}
+
+.verification-in-progress {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.verification-pending {
+  color: #f57c00;
+  font-weight: 600;
+}
+
+.quick-status-actions {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #667eea;
+}
+
+.quick-status-actions h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.status-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.status-btn:hover:not(:disabled) {
+  border-color: #667eea;
+  background: #f5f5ff;
+  transform: translateY(-2px);
+}
+
+.status-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-btn.active {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+}
+
+.status-btn.active:disabled {
+  opacity: 1;
+}
+
+.bug-details-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.worked-by-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.worked-by-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.worker-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.worker-dates {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.status-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.status-history-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.status-history-status {
+  min-width: 120px;
+}
+
+.status-history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.status-history-user {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.status-history-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .bug-details-actions {
+    flex-direction: column;
+  }
+
+  .bug-details-actions .btn {
+    width: 100%;
+  }
+}
+

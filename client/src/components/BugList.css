@@ -1,0 +1,158 @@
+.bug-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.bug-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-left: 4px solid #e0e0e0;
+}
+
+.bug-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.bug-card.priority-high {
+  border-left-color: #dc3545;
+}
+
+.bug-card.priority-medium {
+  border-left-color: #ffc107;
+}
+
+.bug-card.priority-low {
+  border-left-color: #28a745;
+}
+
+.bug-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.bug-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  margin: 0;
+}
+
+.bug-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-open {
+  background: #fee;
+  color: #dc3545;
+}
+
+.status-badge.status-progress {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.status-badge.status-resolved {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.status-not-reproducible {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.status-closed {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.priority-badge.priority-high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.priority-badge.priority-medium {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.priority-badge.priority-low {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.bug-description {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bug-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #999;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.bug-reporter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.empty-state {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .bug-list {
+    grid-template-columns: 1fr;
+  }
+
+  .bug-card-header {
+    flex-direction: column;
+  }
+
+  .bug-badges {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
